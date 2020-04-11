@@ -38,4 +38,26 @@
     
   </entry>
   
+  <entry>
+    <title>CSS帧动画、补间动画</title>
+    <link href="https://stdim.github.io/2020/04/11/CSS%E5%B8%A7%E5%8A%A8%E7%94%BB%E3%80%81%E8%A1%A5%E9%97%B4%E5%8A%A8%E7%94%BB/"/>
+    <id>https://stdim.github.io/2020/04/11/CSS%E5%B8%A7%E5%8A%A8%E7%94%BB%E3%80%81%E8%A1%A5%E9%97%B4%E5%8A%A8%E7%94%BB/</id>
+    <published>2020-04-11T07:10:32.000Z</published>
+    <updated>2020-04-11T07:10:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="CSS侦动画、补间动画"><a href="#CSS侦动画、补间动画" class="headerlink" title="CSS侦动画、补间动画"></a>CSS侦动画、补间动画</h1><h2 id="CSS侦动画、补间动画-1"><a href="#CSS侦动画、补间动画-1" class="headerlink" title="CSS侦动画、补间动画"></a>CSS侦动画、补间动画</h2><p><strong>关键侦动画和补间动画的区别</strong></p><p>关键侦动画就是需要自己完成动画的关键帧，需要知道动画的关键侦（包括起始和末尾），而补间动画则是只知道起始和末尾状态，对中间过渡进行补间的。 关键侦动画可以实现无限循环、动画反转等效果，而补间动画只能实现一次性的过渡效果。</p><p><strong>1. css侦动画</strong></p><p><em>CSS3 Animation 由三部分组成</em></p><ul><li>动画属性(properties) - 定义动画的播放时长，播放次数，以及用何种时间函数去播放动画等</li><li>关键帧(keyframes) - 定义动画在不同阶段的状态</li><li>css属性 - 就是css元素不同关键帧下的状态</li></ul><p><em>举个🌰，实现一个简单的圆呼吸效果</em></p><p>🤔首先定义动画属性，依次是： &gt; 动画名称、持续时间、时间函数、延迟时间、循环次数、是否轮流反向播放 ，animation: name duration timing-function delay iteration-count direction</p><p>⛽️接下来，定义keyframes</p><blockquote><p>@keyframes 名称</p></blockquote><p>😄最后，定义css变化属性</p><blockquote><p>0%(from) 属性 属性值</p></blockquote><blockquote><p>50% 属性 属性值</p></blockquote><blockquote><p>100%(to) 属性 属性值</p></blockquote><p><em>直接上代码</em></p><pre><code>.circle {  width: 50px;  height: 50px;  background: rgba(0, 0, 0, .5);  animation: breath-circle 2s ease-out 1s infinite;}@keyframes breath-circle {  0% { transform: scale(1); background: rgba(0, 0, 0, .5); }  25% { transform: scale(.9); background: rgba(0, 0, 0, .4); }  50% { transform: scale(.8); background: rgba(0, 0, 0, .3); }  75% { transform: scale(.9); background: rgba(0, 0, 0, .4); }  100% { transform: scale(1); background: rgba(0, 0, 0, .5); }}</code></pre><p><em>如果需要兼容浏览器，根据需要设置-webkit-这些前缀</em></p><p><strong>2. css补间动画</strong></p><p><em>补间动画我理解就是对transition属性的灵活运用</em></p><ul><li>transition 属性 时间函数 渐变时长 延迟时长</li></ul><p><em>举个🌰，实现一个从底部向上擦除的效果</em></p><p><em>代码撸起来 go go go…</em></p><pre><code>&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;.box{  width: 100px;  height: 100px;  background: rgba(0, 0, 0, 0.7);  pointer-events: none;  mask: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%) no-repeat center bottom;  mask-size: 100% 0%;  transition: mask-size ease-out 0.3s 0.3s;}// 在变化时添加box-go类，看看擦除效果.box-go{  pointer-events: auto;  mask-size: 100% 100%;}</code></pre><p><em>其实大多数情况下都是渐变transform属性，因为transform属性的渐变不会触发回流、重绘，不吃性能，所以建议用transform属性做渐变动画</em></p><p>不过说到回流、重绘，如果不提一提有点不够意思啦哈哈哈😂 欲知后事如何，且听下回分解</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;CSS侦动画、补间动画&quot;&gt;&lt;a href=&quot;#CSS侦动画、补间动画&quot; class=&quot;headerlink&quot; title=&quot;CSS侦动画、补间动画&quot;&gt;&lt;/a&gt;CSS侦动画、补间动画&lt;/h1&gt;&lt;h2 id=&quot;CSS侦动画、补间动画-1&quot;&gt;&lt;a href=&quot;#CSS侦
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
 </feed>
