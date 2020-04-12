@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stdim.github.io/"/>
-  <updated>2020-04-11T15:08:25.295Z</updated>
+  <updated>2020-04-12T09:10:16.220Z</updated>
   <id>https://stdim.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ha</title>
+    <link href="https://stdim.github.io/2020/04/12/canvas/"/>
+    <id>https://stdim.github.io/2020/04/12/canvas/</id>
+    <published>2020-04-12T09:09:31.000Z</published>
+    <updated>2020-04-12T09:10:16.220Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="canvas-逐帧动画"><a href="#canvas-逐帧动画" class="headerlink" title="canvas 逐帧动画"></a>canvas 逐帧动画</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'opening-line'</span>);</span><br><span class="line">  canvas.width = <span class="number">150</span>;</span><br><span class="line">  canvas.height = <span class="number">150</span>;</span><br><span class="line">  <span class="keyword">var</span> ctx = canvas.getContext(<span class="string">'2d'</span>);</span><br><span class="line">  <span class="keyword">var</span> picSize = <span class="number">150</span>;</span><br><span class="line">  <span class="keyword">var</span> duration = <span class="number">40</span>;</span><br><span class="line">  <span class="keyword">var</span> index = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">var</span> image = <span class="keyword">new</span> Image();</span><br><span class="line">  image.src= canvas.getAttribute(<span class="string">'src'</span>);</span><br><span class="line">  image.addEventListener(<span class="string">'load'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      ctx.clearRect(<span class="number">0</span>, <span class="number">0</span>, canvas.width, canvas.height);</span><br><span class="line">      ctx.drawImage(image, index * picSize, <span class="number">0</span>, picSize, picSize, <span class="number">0</span>, <span class="number">0</span>, picSize, picSize);</span><br><span class="line">      index++;</span><br><span class="line">      <span class="keyword">if</span> (index === <span class="number">34</span>) index = <span class="number">0</span>;</span><br><span class="line">    &#125;,duration);</span><br><span class="line">  &#125;);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;canvas-逐帧动画&quot;&gt;&lt;a href=&quot;#canvas-逐帧动画&quot; class=&quot;headerlink&quot; title=&quot;canvas 逐帧动画&quot;&gt;&lt;/a&gt;canvas 逐帧动画&lt;/h1&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>EventLoop曾经的理解</title>
