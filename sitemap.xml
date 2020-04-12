@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://stdim.github.io/page/index.html</loc>
+    
+    <lastmod>2020-04-12T09:07:00.872Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://stdim.github.io/2020/04/11/EventLoop%E6%9B%BE%E7%BB%8F%E7%9A%84%E7%90%86%E8%A7%A3/</loc>
     
     <lastmod>2020-04-11T15:08:25.295Z</lastmod>
